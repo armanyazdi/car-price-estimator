@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fa-IR" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>محاسبه قیمت خودرو کارکرده</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link th:href="@{/css/styles.css}" rel="stylesheet">
+  <link th:href="@{/fonts/yekanbakh/font-face.css}" rel="stylesheet">
+</head>
+<body>
+
+<section>
+  <div class="app">
+    <div class="app-image">
+      <div id="particles-js"></div>
+    </div>
+    <ul class="app-container">
+      <div>
+
+        <div style="background-color: #fff; padding-bottom: 10px; border-bottom: 3px dashed #eee">
+          <h3 th:text="${car.brand} + '، ' + ${car.color} + '، ' + 'مدل ' + ${car.production} + '، ' + ${#numbers.formatInteger(car.mileage, 3, 'COMMA')} + ' کیلومتر، ' + ${car.status}"></h3>
+        </div>
+
+        <div style="padding: 15% 0 65px 0">
+          <div class="price" th:text="${#numbers.formatInteger(minimum, 3, 'COMMA')} + ' تومان'"></div>
+          <div class="price" th:text="${#numbers.formatInteger(maximum, 3, 'COMMA')} + ' تومان'"></div>
+          <div class="vertical-lines"></div>
+          <div class="unfair-downer">پایین</div>
+          <div class="fair">منصفانه</div>
+          <div class="unfair-upper">بالا</div>
+        </div>
+
+        <div style="padding-top: 15%">
+          <table>
+            <tr>
+              <td>حداقل قیمت منصفانه</td>
+              <td style="text-align: left; font-weight: 400;" th:text="${#numbers.formatInteger(minimum, 3, 'COMMA')} + ' تومان'"></td>
+            </tr>
+            <tr>
+              <td>حداکثر قیمت منصفانه</td>
+              <td style="text-align: left; font-weight: 400;" th:text="${#numbers.formatInteger(maximum, 3, 'COMMA')} + ' تومان'"></td>
+            </tr>
+            <tr>
+              <td>تاریخ</td>
+              <td style="text-align: left; font-weight: 400;" th:text="${day} + ' ' + ${date}"></td>
+            </tr>
+          </table>
+        </div>
+
+      </div>
+    </ul>
+  </div>
+</section>
+
+<script th:src="@{/js/particles.min.js}" type="text/javascript"></script>
+
+<script>
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 100, density: { enable: true, value_area: 800 } },
+      color: { value: "#fff" },
+      shape: {
+        type: "circle",
+        stroke: { width: 0, color: "#000" },
+        polygon: { nb_sides: 5 },
+      },
+      opacity: {
+        value: 1,
+        random: true,
+        anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false }
+      },
+      size: {
+        value: 5,
+        random: true,
+        anim: { enable: false, speed: 40, size_min: 0.1, sync: false }
+      },
+      line_linked: {
+        enable: false,
+        distance: 500,
+        color: "#fff",
+        opacity: 0.4,
+        width: 2
+      },
+      move: {
+        enable: true,
+        speed: 5,
+        direction: "bottom",
+        random: false,
+        straight: false,
+        out_mode: "out",
+        bounce: false,
+        attract: { enable: false, rotateX: 600, rotateY: 1200 }
+      }
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: { enable: false, mode: "bubble" },
+        onclick: { enable: false, mode: "repulse" },
+        resize: false
+      },
+      modes: {
+        grab: { distance: 400, line_linked: { opacity: 0.5 } },
+        bubble: { distance: 400, size: 4, duration: 0.3, opacity: 1, speed: 3 },
+        repulse: { distance: 200, duration: 0.4 },
+        push: { particles_nb: 4 },
+        remove: { particles_nb: 2 }
+      }
+    },
+    retina_detect: true
+  });
+</script>
+
+</body>
+</html>

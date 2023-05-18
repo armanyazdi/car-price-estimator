@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fa-IR" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>محاسبه قیمت خودرو کارکرده</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link th:href="@{/css/styles.css}" rel="stylesheet">
+  <link th:href="@{/fonts/yekanbakh/font-face.css}" rel="stylesheet">
+</head>
+<body>
+
+<section>
+  <div class="app">
+    <div class="app-image">
+      <div id="particles-js"></div>
+    </div>
+    <ul class="app-container">
+      <div>
+        <form method="post" th:object="${car}" th:action="@{/handleSubmit}">
+
+          <select required id="brand" name="brand" th:field="*{brand}" oninvalid="this.setCustomValidity('برند خودرو را وارد کنید')" oninput="this.setCustomValidity('')">
+            <option value="" th:disabled selected hidden>برند خودرو</option>
+            <option th:each="i : ${brands}" th:value="${i}" th:text="${i}"></option>
+          </select>
+
+          <select required id="gearbox" name="gearbox" th:field="*{gearbox}" oninvalid="this.setCustomValidity('نوع گیربکس را وارد کنید')" oninput="this.setCustomValidity('')">
+            <option value="" th:disabled selected hidden>نوع گیربکس</option>
+            <option th:each="i : ${gearboxes}" th:value="${i}" th:text="${i}"></option>
+          </select>
+
+          <input required type="number" id="production" name="production" th:field="*{production}" placeholder="مدل (سال تولید)" min="1345" max="1402" oninvalid="this.setCustomValidity('مدل باید بین سال های ۱۳۴۵ تا ۱۴۰۲ باشد')" oninput="this.setCustomValidity(''); productionToWords()">
+          <p id="productionToWords"></p>
+
+          <input required type="number" id="mileage" name="mileage" th:field="*{mileage}" placeholder="کارکرد (کیلومتر)" min="0" max="1000000" oninvalid="this.setCustomValidity('کارکرد باید بین ۰ تا ۱۰۰۰۰۰۰ کیلومتر باشد')" oninput="this.setCustomValidity(''); mileageToWords()">
+          <p id="mileageToWords"></p>
+
+          <select required id="color" name="color" th:field="*{color}" oninvalid="this.setCustomValidity('رنگ خودرو را وارد کنید')" oninput="this.setCustomValidity('')">
+            <option value="" th:disabled selected hidden>رنگ خودرو</option>
+            <option th:each="i : ${colors}" th:value="${i}" th:text="${i}"></option>
+          </select>
+
+          <select required id="status" name="status" th:field="*{status}" oninvalid="this.setCustomValidity('وضعیت بدنه را وارد کنید')" oninput="this.setCustomValidity('')">
+            <option value="" th:disabled selected hidden>وضعیت بدنه</option>
+            <option th:each="i : ${statuses}" th:value="${i}" th:text="${i}"></option>
+          </select>
+
+          <button class="estimate-btn" type="submit" value="submit">تخمین قیمت</button>
+
+        </form>
+      </div>
+    </ul>
+  </div>
+</section>
+
+<script th:src="@{/js/particles.min.js}" type="text/javascript"></script>
+<script th:src="@{/js/persian-tools.umd.js}" type="text/javascript"></script>
+
+<script>
+  function productionToWords() {
+    var production = document.getElementById("production").value;
+    document.getElementById("productionToWords").innerHTML = PersianTools.numberToWords(production).replace("یک هزار و", "هزار و");
+  }
+
+  function mileageToWords() {
+    var mileage = document.getElementById("mileage").value;
+    document.getElementById("mileageToWords").innerHTML = PersianTools.numberToWords(mileage).replace("یک هزار و", "هزار و") + " کیلومتر";
+  }
+
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 100, density: { enable: true, value_area: 800 } },
+      color: { value: "#fff" },
+      shape: {
+        type: "circle",
+        stroke: { width: 0, color: "#000" },
+        polygon: { nb_sides: 5 },
+      },
+      opacity: {
+        value: 1,
+        random: true,
+        anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false }
+      },
+      size: {
+        value: 5,
+        random: true,
+        anim: { enable: false, speed: 40, size_min: 0.1, sync: false }
+      },
+      line_linked: {
+        enable: false,
+        distance: 500,
+        color: "#fff",
+        opacity: 0.4,
+        width: 2
+      },
+      move: {
+        enable: true,
+        speed: 5,
+        direction: "bottom",
+        random: false,
+        straight: false,
+        out_mode: "out",
+        bounce: false,
+        attract: { enable: false, rotateX: 600, rotateY: 1200 }
+      }
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: { enable: false, mode: "bubble" },
+        onclick: { enable: false, mode: "repulse" },
+        resize: false
+      },
+      modes: {
+        grab: { distance: 400, line_linked: { opacity: 0.5 } },
+        bubble: { distance: 400, size: 4, duration: 0.3, opacity: 1, speed: 3 },
+        repulse: { distance: 200, duration: 0.4 },
+        push: { particles_nb: 4 },
+        remove: { particles_nb: 2 }
+      }
+    },
+    retina_detect: true
+  });
+</script>
+
+</body>
+</html>
