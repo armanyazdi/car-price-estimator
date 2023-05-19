@@ -95,6 +95,10 @@ public class PriceEstimator {
             case "پژو روآ" -> carBrands = new String[]{"peugeot-roa", "peugeot/roa/petrol"};
             case "پژو RD" -> carBrands = new String[]{"peugeot-rd", "peugeot/rd/petrol"};
             case "پژو RDI" -> carBrands = new String[]{"peugeot-rdi", "peugeot/rdi/petrol"};
+            case "پیکان بنزینی" -> carBrands = new String[]{"peykan-sedan-gas", "paykan/petrol"};
+            case "پیکان دوگانه سوز" -> carBrands = new String[]{"peykan-sedan-cng", "paykan/bi-fuel(cng)"};
+            case "پیکان وانت بنزینی" -> carBrands = new String[]{"peykan-pickup-gas", "paykan/pickup/petrol"};
+            case "پیکان وانت دوگانه سوز" -> carBrands = new String[]{"peykan-pickup-cng", "paykan/pickup/cng"};
             case "تیبا صندوقدار پلاس" -> carBrands = new String[]{"tiba-sedan-plus", "tiba/sedan/plus"};
             case "تیبا صندوقدار EX" -> carBrands = new String[]{"tiba-sedan-ex", "tiba/sedan/ex"};
             case "تیبا صندوقدار SL" -> carBrands = new String[]{"tiba-sedan-sl", "tiba/sedan"};
@@ -118,6 +122,8 @@ public class PriceEstimator {
             case "دنا پلاس 6 دنده توربو" -> carBrands = new String[]{"dena-plus-turbo6mt", "dena/plus/manual-6-turbo"};
             case "دنا پلاس اتوماتیک توربو" -> carBrands = new String[]{"dena-plus-turboautomatic", "dena/plus/automatic"};
             case "دنا پلاس دنده ای ساده" -> carBrands = new String[]{"dena-plus-basicmanual", "dena/plus/manual-2"};
+            case "دیگنیتی پرایم" -> carBrands = new String[]{"dignity-prime", "dignity"};
+            case "دیگنیتی پرستیژ" -> carBrands = new String[]{"dignity-prestige", "dignity"};
             case "رانا پلاس" -> carBrands = new String[]{"runna-plus", "runna/plus"};
             case "رانا پلاس پانوراما" -> carBrands = new String[]{"runna-pluspanorama", "runna/plus-p"};
             case "رانا EL" -> carBrands = new String[]{"runna-el", "runna/el"};
@@ -152,12 +158,18 @@ public class PriceEstimator {
             case "سیتروئن زانتیا 1.8" -> carBrands = new String[]{"citroen-xantia-1.8superlux", "citroen/xantia/1800cc"};
             case "سیتروئن زانتیا 2.0 SX" -> carBrands = new String[]{"citroen-xantia-2.0sx", "citroen/xantia/2000cc"};
             case "شاهین G" -> carBrands = new String[]{"shahin-g", "shahin/g"};
+            case "فیدلیتی پرایم 5 نفره" -> carBrands = new String[]{"fidelity-prime-5seater", "fidelity/prime/5seater"};
+            case "فیدلیتی پرایم 7 نفره" -> carBrands = new String[]{"fidelity-prime-7seater", "fidelity/prime/7seater"};
             case "کوییک اتوماتیک" -> carBrands = new String[]{"quick-atfull", "quick/automatic/full"};
             case "کوییک اتوماتیک پلاس" -> carBrands = new String[]{"quick-atfullplus", "quick/automatic/full-plus"};
             case "کوییک دنده ای" -> carBrands = new String[]{"quick-manual", "quick/manual/basic"};
             case "کوییک دنده ای R" -> carBrands = new String[]{"quick-manualr", "quick/manual/r"};
             case "کوییک دنده ای S" -> carBrands = new String[]{"quick-manuals", "quick/manual/s"};
             case "کوییک R پلاس اتوماتیک" -> carBrands = new String[]{"quick-manualrplus-at", "quick/automatic/p-plus"};
+            case "کی ام سی J7" -> carBrands = new String[]{"kmc-j7", "kmc/j7"};
+            case "کی ام سی K7" -> carBrands = new String[]{"kmc-k7", "kmc/k7"};
+            case "کی ام سی T8" -> carBrands = new String[]{"kmc-t8", "kmc/t8"};
+            case "لاماری ایما" -> carBrands = new String[]{"lamari", "lamari/eama"};
             case "هایما S5 6 سرعته اتوماتیک" -> carBrands = new String[]{"haima-s5-6at", "haima/s5/6-at"};
             case "هایما S5 گیربکس CVT" -> carBrands = new String[]{"haima-s5-cvt", "haima/s5/at-cvt"};
             case "هایما S7 2.0" -> carBrands = new String[]{"haima-s7-2.0l", "haima/s7/automatic-2000cc"};
@@ -213,7 +225,7 @@ public class PriceEstimator {
             case "یاسی" -> carColors = new String[]{"lilac", URLEncoder.encode("بنفش", StandardCharsets.UTF_8)};
             case "اخرائی" -> carColors = new String[]{"ochre", URLEncoder.encode("نارنجی", StandardCharsets.UTF_8)};
             case "صورتی" -> carColors = new String[]{"pink", URLEncoder.encode("بنفش", StandardCharsets.UTF_8)};
-            case "شتری" -> carColors = new String[]{"camellike", URLEncoder.encode("خاکی", StandardCharsets.UTF_8)};
+            case "عدسی" -> carColors = new String[]{"lentil", URLEncoder.encode("عدسی", StandardCharsets.UTF_8)};
             case "مارون" -> carColors = new String[]{"maroon", URLEncoder.encode("آلبالویی", StandardCharsets.UTF_8)};
         }
 
