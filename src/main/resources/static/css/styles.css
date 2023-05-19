@@ -1,3 +1,6 @@
+@import url('../fonts/yekanbakh/font-face.css');
+@import url('../fonts/peyda/font-face.css');
+
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +19,7 @@ html, body {
 
 h3 {
     position: relative;
-    color: #302e49;
+    color: #000;
     font-size: calc(24px + (32 - 24) * ((100vw - 300px) / (1920 - 300)));
     font-weight: 300;
     line-height: 2;
@@ -25,7 +28,7 @@ h3 {
 
 p {
     position: relative;
-    color: #302e49;
+    color: #5b407c;
     font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1920 - 300)));
     font-weight: 300;
     line-height: 1.5;
@@ -47,7 +50,7 @@ td, th {
     border-top: 3px dashed #eee;
     text-align: right;
     padding: 10px 0 8px 0;
-    color: #302e49;
+    color: #000;
     font-size: calc(20px + (28 - 20) * ((100vw - 300px) / (1920 - 300)));
     font-weight: 300;
 }
@@ -65,6 +68,9 @@ td, th {
     width: 50%;
     height: 100vh;
     overflow: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .app-container {
@@ -73,9 +79,6 @@ td, th {
     direction: rtl;
     text-align: right;
     background: #fff;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .app-image {
@@ -85,9 +88,6 @@ td, th {
     display: flex;
     align-content: center;
     align-self: center;
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
 }
 
 input[type=text], input[type=number], select {
@@ -117,11 +117,12 @@ select:invalid {
     width: 50%;
     background: #ff1d4f;
     color: #fff;
-    padding: 20px 20px;
+    padding: 24px 0;
     margin: 10px 0;
     border: none;
     border-radius: 50px;
-    font-weight: 300;
+    font-family: 'PeydaWebFaNum', monospace;
+    font-weight: 400;
     cursor: pointer;
     display: inline-block;
     -ms-transform: translateX(-50%);
@@ -132,45 +133,35 @@ select:invalid {
     background: #5b407c;
 }
 
-.unfair-downer {
+.unfair-downer, .fair, .unfair-upper {
     height: 65px;
+    font-family: 'PeydaWebFaNum', monospace;
+    font-size: calc(18px + (24 - 18) * ((100vw - 300px) / (1920 - 300)));
+    font-weight: 400;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    float: left;
+}
+
+.unfair-downer {
     width: 25%;
     background-color: #21300d;
     color: #fff;
-    font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1920 - 300)));
-    font-weight: 600;
     border-radius: 50px 0 0 50px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    float: left;
 }
 
 .fair {
-    height: 65px;
     width: 50%;
     background-color: #aec881;
     color: #fff;
-    font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1920 - 300)));
-    font-weight: 600;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    float: left;
 }
 
 .unfair-upper {
-    height: 65px;
     width: 25%;
     background-color: #ff1d4f;
     color: #fff;
-    font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1920 - 300)));
-    font-weight: 600;
     border-radius: 0 50px 50px 0;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    float: left;
 }
 
 .price {
@@ -178,8 +169,9 @@ select:invalid {
     width: 50%;
     background-color: transparent;
     color: #7e4a95;
-    font-size: calc(18px + (20 - 18) * ((100vw - 300px) / (1920 - 300)));
-    font-weight: 400;
+    font-family: 'PeydaWebFaNum', monospace;
+    font-size: calc(20px + (22 - 20) * ((100vw - 300px) / (1920 - 300)));
+    font-weight: 300;
     align-items: center;
     justify-content: center;
     display: flex;
