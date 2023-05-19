@@ -17,7 +17,7 @@ html, body {
 h3 {
     position: relative;
     color: #302e49;
-    font-size: calc(24px + (36 - 24) * ((100vw - 300px) / (1920 - 300)));
+    font-size: calc(24px + (32 - 24) * ((100vw - 300px) / (1920 - 300)));
     font-weight: 300;
     line-height: 2;
     text-align: center;
@@ -98,7 +98,7 @@ input[type=text], input[type=number], select {
     margin: 10px 0;
     display: inline-block;
     border: none;
-    border-bottom: 3px solid #8e8eac;
+    border-bottom: 3px solid #eee;
     border-radius: 0;
     box-sizing: border-box;
     outline: none;
@@ -106,7 +106,7 @@ input[type=text], input[type=number], select {
 
 input[type=text]:focus, input[type=number]:focus, select:focus {
     border: none;
-    border-bottom: 3px solid #5b407c;
+    border-bottom: 3px solid #7e4a95;
 }
 
 select:invalid {
@@ -116,7 +116,6 @@ select:invalid {
 .estimate-btn {
     width: 50%;
     background: #ff1d4f;
-    background-size: 200% auto;
     color: #fff;
     padding: 20px 20px;
     margin: 10px 0;
@@ -178,7 +177,7 @@ select:invalid {
     height: 100%;
     width: 50%;
     background-color: transparent;
-    color: #5b407c;
+    color: #7e4a95;
     font-size: calc(18px + (20 - 18) * ((100vw - 300px) / (1920 - 300)));
     font-weight: 400;
     align-items: center;
