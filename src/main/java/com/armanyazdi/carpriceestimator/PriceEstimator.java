@@ -257,8 +257,8 @@ public class PriceEstimator {
             for (Element price : bamaPrices) bamaPricesList.add(price.text().replace(",", ""));
             for (String price : bamaPricesList) sumBama += Long.parseLong(price);
         }
-        catch (IOException e1) {
-            e1.printStackTrace();
+        catch (IOException e) {
+            e.printStackTrace();
         }
 
         // Divar
@@ -273,8 +273,8 @@ public class PriceEstimator {
 
             for (String price : divarPricesList) sumDivar += Long.parseLong(price);
         }
-        catch (IOException e1) {
-            e1.printStackTrace();
+        catch (IOException e) {
+            e.printStackTrace();
         }
 
         // Merge Prices
@@ -283,7 +283,10 @@ public class PriceEstimator {
         for (String price : allPricesList) sumAll += Long.parseLong(price);
 
         // Final Price
-        averagePrice = sumAll / allPricesList.size();
+        if (allPricesList.size() != 0)
+            averagePrice = sumAll / allPricesList.size();
+        else
+            averagePrice = 0;
     }
 
     public long minimumPrice() {
