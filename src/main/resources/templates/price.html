@@ -6,7 +6,6 @@
   <title>محاسبه قیمت خودرو کارکرده</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link th:href="@{/css/styles.css}" rel="stylesheet">
-  <link th:href="@{/fonts/yekanbakh/font-face.css}" rel="stylesheet">
 </head>
 <body>
 
@@ -63,7 +62,7 @@
       shape: {
         type: "circle",
         stroke: { width: 0, color: "#000" },
-        polygon: { nb_sides: 5 },
+        polygon: { nb_sides: 6 },
       },
       opacity: {
         value: 1,
@@ -96,8 +95,8 @@
     interactivity: {
       detect_on: "canvas",
       events: {
-        onhover: { enable: false, mode: "bubble" },
-        onclick: { enable: false, mode: "repulse" },
+        onhover: { enable: false, mode: "repulse" },
+        onclick: { enable: true, mode: "push" },
         resize: false
       },
       modes: {
