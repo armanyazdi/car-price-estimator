@@ -18,11 +18,11 @@
     <ul class="app-container">
       <div>
 
-        <div style="background-color: #fff; padding-bottom: 10px; border-bottom: 3px dashed #eee">
+        <div style="padding-bottom: 10px; border-bottom: 3px solid #eee;">
           <h3 th:text="${car.brand} + '، ' + ${car.color} + '، ' + 'مدل ' + ${car.production} + '، ' + ${#numbers.formatInteger(car.mileage, 3, 'COMMA')} + ' کیلومتر، ' + ${car.status}"></h3>
         </div>
 
-        <div style="padding: 15% 0 65px 0">
+        <div style="padding: 12% 0 65px 0;">
           <div class="price" th:text="${#numbers.formatInteger(minimum, 3, 'COMMA')} + ' تومان'"></div>
           <div class="price" th:text="${#numbers.formatInteger(maximum, 3, 'COMMA')} + ' تومان'"></div>
           <div class="vertical-lines"></div>
@@ -31,19 +31,19 @@
           <div class="unfair-upper">بالا</div>
         </div>
 
-        <div style="padding-top: 15%">
+        <div style="padding-top: 12%;">
           <table>
             <tr>
               <td>حداقل قیمت منصفانه</td>
-              <td style="text-align: left; font-weight: 400;" th:text="${#numbers.formatInteger(minimum, 3, 'COMMA')} + ' تومان'"></td>
+              <td style="color: #5b407c; text-align: left;" th:text="${#numbers.formatInteger(minimum, 3, 'COMMA')} + ' تومان'"></td>
             </tr>
             <tr>
               <td>حداکثر قیمت منصفانه</td>
-              <td style="text-align: left; font-weight: 400;" th:text="${#numbers.formatInteger(maximum, 3, 'COMMA')} + ' تومان'"></td>
+              <td style="color: #5b407c; text-align: left;" th:text="${#numbers.formatInteger(maximum, 3, 'COMMA')} + ' تومان'"></td>
             </tr>
             <tr>
               <td>تاریخ</td>
-              <td style="text-align: left; font-weight: 400;" th:text="${day} + ' ' + ${date}"></td>
+              <td style="color: #5b407c; text-align: left;" th:text="${day} + ' ' + ${date}"></td>
             </tr>
           </table>
         </div>
