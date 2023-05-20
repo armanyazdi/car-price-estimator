@@ -1,14 +1,13 @@
-@import url('../fonts/yekanbakh/font-face.css');
-@import url('../fonts/peyda/font-face.css');
+@import url('../fonts/modam/font-face.css');
 
 * {
     margin: 0;
     padding: 0;
     user-select: none;
     box-sizing: border-box;
-    font-family: 'YekanBakhFaNum', monospace;
+    font-family: 'ModamFaNumWeb', monospace;
     font-size: calc(16px + (28 - 16) * ((100vw - 300px) / (1920 - 300)));
-    font-weight: 300;
+    font-weight: 200;
 }
 
 html, body {
@@ -21,7 +20,6 @@ h3 {
     position: relative;
     color: #000;
     font-size: calc(24px + (32 - 24) * ((100vw - 300px) / (1920 - 300)));
-    font-weight: 300;
     line-height: 2;
     text-align: center;
 }
@@ -30,7 +28,6 @@ p {
     position: relative;
     color: #5b407c;
     font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1920 - 300)));
-    font-weight: 300;
     line-height: 1.5;
     direction: rtl;
 }
@@ -52,7 +49,6 @@ td, th {
     padding: 10px 0 8px 0;
     color: #000;
     font-size: calc(20px + (28 - 20) * ((100vw - 300px) / (1920 - 300)));
-    font-weight: 300;
 }
 
 .app {
@@ -117,12 +113,11 @@ select:invalid {
     width: 50%;
     background: #ff1d4f;
     color: #fff;
-    padding: 24px 0;
+    padding: 20px 0;
     margin: 10px 0;
     border: none;
     border-radius: 50px;
-    font-family: 'PeydaWebFaNum', monospace;
-    font-weight: 400;
+    font-weight: 300;
     cursor: pointer;
     display: inline-block;
     -ms-transform: translateX(-50%);
@@ -135,9 +130,8 @@ select:invalid {
 
 .unfair-downer, .fair, .unfair-upper {
     height: 65px;
-    font-family: 'PeydaWebFaNum', monospace;
     font-size: calc(18px + (24 - 18) * ((100vw - 300px) / (1920 - 300)));
-    font-weight: 400;
+    font-weight: 300;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -169,7 +163,6 @@ select:invalid {
     width: 50%;
     background-color: transparent;
     color: #7e4a95;
-    font-family: 'PeydaWebFaNum', monospace;
     font-size: calc(20px + (22 - 20) * ((100vw - 300px) / (1920 - 300)));
     font-weight: 300;
     align-items: center;
