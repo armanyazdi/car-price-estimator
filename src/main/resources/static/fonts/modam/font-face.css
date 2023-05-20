@@ -1,0 +1,83 @@
+﻿/**
+*
+*	Name:				Modam Fonts
+*	Version:			1.0
+*	Author:			Naser Khadem
+*	Created on:		April 22, 2023
+*	Updated on:		April 22, 2023
+*	Website:			http://fontiran.com
+*	Copyright:			Commercial/Proprietary Software
+--------------------------------------------------------------------------------------
+فونت کلمه یک نرم افزار مالکیتی محسوب می شود. جهت آگاهی از قوانین استفاده از این فونت ها لطفا به وب سایت (فونت ایران دات کام) مراجعه نمایید
+--------------------------------------------------------------------------------------
+Modam fonts are considered a proprietary software. To gain information about the laws regarding the use of these fonts, please visit www.fontiran.com 
+--------------------------------------------------------------------------------------
+This set of fonts are used in this project under the license: (.....)
+------------------------------------------------------------------------------------- fonts/-
+*	
+**/
+
+@font-face {
+	font-family: ModamFaNumWeb;
+	font-style: normal;
+	font-weight: 200;
+	src: url('fonts/woff2/ModamFaNumWeb-ExtraLight.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('fonts/woff/ModamFaNumWeb-ExtraLight.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+	font-family: ModamFaNumWeb;
+	font-style: normal;
+	font-weight: 300;
+	src: url('fonts/woff2/ModamFaNumWeb-Light.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('fonts/woff/ModamFaNumWeb-Light.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+	font-family: ModamFaNumWeb;
+	font-style: normal;
+	font-weight: normal;
+	src: url('fonts/woff2/ModamFaNumWeb-Regular.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('fonts/woff/ModamFaNumWeb-Regular.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+	font-family: ModamFaNumWeb;
+	font-style: normal;
+	font-weight: 500;
+	src: url('fonts/woff2/ModamFaNumWeb-Medium.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('fonts/woff/ModamFaNumWeb-Medium.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+	font-family: ModamFaNumWeb;
+	font-style: normal;
+	font-weight: 600;
+	src: url('fonts/woff2/ModamFaNumWeb-SemiBold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('fonts/woff/ModamFaNumWeb-SemiBold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+	font-family: ModamFaNumWeb;
+	font-style: normal;
+	font-weight: bold;
+	src: url('fonts/woff2/ModamFaNumWeb-Bold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('fonts/woff/ModamFaNumWeb-Bold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+	font-family: ModamFaNumWeb;
+	font-style: normal;
+	font-weight: 800;
+	src: url('fonts/woff2/ModamFaNumWeb-ExtraBold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('fonts/woff/ModamFaNumWeb-ExtraBold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+	font-family: ModamFaNumWeb;
+	font-style: normal;
+	font-weight: 900;
+	src: url('fonts/woff2/ModamFaNumWeb-Black.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('fonts/woff/ModamFaNumWeb-Black.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
