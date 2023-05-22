@@ -15,8 +15,8 @@ public class DateConvertor {
         short gregorianYear = Short.parseShort(DateTimeFormatter.ofPattern("yyyy").format(localDate));
         byte gregorianMonth = Byte.parseByte(DateTimeFormatter.ofPattern("MM").format(localDate));
         byte gregorianDay = Byte.parseByte(DateTimeFormatter.ofPattern("dd").format(localDate));
-        int[] gDate = gregorianToJalali(gregorianYear, gregorianMonth, gregorianDay);
-        return "%s/%s/%s".formatted(gDate[0], gDate[1], gDate[2]);
+        int[] jalaliDate = gregorianToJalali(gregorianYear, gregorianMonth, gregorianDay);
+        return "%s/%s/%s".formatted(jalaliDate[0], jalaliDate[1], jalaliDate[2]);
     }
 
     // Day Name of Week
