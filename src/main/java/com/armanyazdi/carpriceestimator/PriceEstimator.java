@@ -8,9 +8,10 @@ import org.jsoup.select.Elements;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+
+import static java.net.URLEncoder.encode;
+import static java.nio.charset.StandardCharsets.UTF_8;
 
 @Component
 public class PriceEstimator {
@@ -185,48 +186,48 @@ public class PriceEstimator {
 
         // Colors
         switch (color) {
-            case "سفید" -> carColors = new String[]{"white", URLEncoder.encode("سفید", StandardCharsets.UTF_8)};
-            case "مشکی" -> carColors = new String[]{"black", URLEncoder.encode("مشکی", StandardCharsets.UTF_8)};
-            case "خاکستری" -> carColors = new String[]{"gray", URLEncoder.encode("خاکستری", StandardCharsets.UTF_8)};
-            case "نقره ای" -> carColors = new String[]{"silver", URLEncoder.encode("نقره‌ای", StandardCharsets.UTF_8)};
-            case "سفید صدفی" -> carColors = new String[]{"pearlwhite", URLEncoder.encode("سفید صدفی", StandardCharsets.UTF_8)};
-            case "نوک مدادی" -> carColors = new String[]{"blacklead", URLEncoder.encode("نوک‌مدادی", StandardCharsets.UTF_8)};
-            case "آبی" -> carColors = new String[]{"blue", URLEncoder.encode("آبی", StandardCharsets.UTF_8)};
-            case "قهوه ای" -> carColors = new String[]{"brown", URLEncoder.encode("قهوه‌ای", StandardCharsets.UTF_8)};
-            case "قرمز" -> carColors = new String[]{"red", URLEncoder.encode("قرمز", StandardCharsets.UTF_8)};
-            case "سرمه ای" -> carColors = new String[]{"darkblue", URLEncoder.encode("سرمه‌ای", StandardCharsets.UTF_8)};
-            case "بژ" -> carColors = new String[]{"beige", URLEncoder.encode("بژ", StandardCharsets.UTF_8)};
-            case "تیتانیوم" -> carColors = new String[]{"titanium", URLEncoder.encode("تیتانیوم", StandardCharsets.UTF_8)};
-            case "سربی" -> carColors = new String[]{"slategray", URLEncoder.encode("سربی", StandardCharsets.UTF_8)};
-            case "سبز" -> carColors = new String[]{"green", URLEncoder.encode("سبز", StandardCharsets.UTF_8)};
-            case "کربن بلک" -> carColors = new String[]{"carbonblack", URLEncoder.encode("کربن‌بلک", StandardCharsets.UTF_8)};
-            case "آلبالویی" -> carColors = new String[]{"maroon" , URLEncoder.encode("آلبالویی", StandardCharsets.UTF_8)};
-            case "نقرآبی" -> carColors = new String[]{"steelblue", URLEncoder.encode("نقرآبی", StandardCharsets.UTF_8)};
-            case "دلفینی" -> carColors = new String[]{"dolohin", URLEncoder.encode("دلفینی", StandardCharsets.UTF_8)};
-            case "زرد" -> carColors = new String[]{"yellow", URLEncoder.encode("زرد", StandardCharsets.UTF_8)};
-            case "مسی" -> carColors = new String[]{"copper", URLEncoder.encode("مسی", StandardCharsets.UTF_8)};
-            case "یشمی" -> carColors = new String[]{"jadegreen", URLEncoder.encode("یشمی", StandardCharsets.UTF_8)};
-            case "بادمجانی" -> carColors = new String[]{"eggplant", URLEncoder.encode("بادمجانی", StandardCharsets.UTF_8)};
-            case "نارنجی" -> carColors = new String[]{"orange", URLEncoder.encode("نارنجی", StandardCharsets.UTF_8)};
-            case "ذغالی" -> carColors = new String[]{"charcoal", URLEncoder.encode("ذغالی", StandardCharsets.UTF_8)};
-            case "طوسی" -> carColors = new String[]{"darkgray", URLEncoder.encode("طوسی", StandardCharsets.UTF_8)};
-            case "زیتونی" -> carColors = new String[]{"olivegreen", URLEncoder.encode("زیتونی", StandardCharsets.UTF_8)};
-            case "کرم" -> carColors = new String[]{"bisque", URLEncoder.encode("کرم", StandardCharsets.UTF_8)};
-            case "گیلاسی" -> carColors = new String[]{"cherry", URLEncoder.encode("گیلاسی", StandardCharsets.UTF_8)};
-            case "طلایی" -> carColors = new String[]{"golden", URLEncoder.encode("طلایی", StandardCharsets.UTF_8)};
-            case "زرشکی" -> carColors = new String[]{"crimson", URLEncoder.encode("زرشکی", StandardCharsets.UTF_8)};
-            case "اطلسی" -> carColors = new String[]{"satin", URLEncoder.encode("اطلسی", StandardCharsets.UTF_8)};
-            case "برنز" -> carColors = new String[]{"bronze", URLEncoder.encode("برنز", StandardCharsets.UTF_8)};
-            case "عنابی" -> carColors = new String[]{"darkred", URLEncoder.encode("عنابی", StandardCharsets.UTF_8)};
-            case "خاکی" -> carColors = new String[]{"khaki", URLEncoder.encode("خاکی", StandardCharsets.UTF_8)};
-            case "موکا" -> carColors = new String[]{"mocha", URLEncoder.encode("موکا", StandardCharsets.UTF_8)};
-            case "بنفش" -> carColors = new String[]{"purple", URLEncoder.encode("بنفش", StandardCharsets.UTF_8)};
-            case "پوست پیازی" -> carColors = new String[]{"onion", URLEncoder.encode("پوست‌پیازی", StandardCharsets.UTF_8)};
-            case "یاسی" -> carColors = new String[]{"lilac", URLEncoder.encode("بنفش", StandardCharsets.UTF_8)};
-            case "اخرائی" -> carColors = new String[]{"ochre", URLEncoder.encode("نارنجی", StandardCharsets.UTF_8)};
-            case "صورتی" -> carColors = new String[]{"pink", URLEncoder.encode("بنفش", StandardCharsets.UTF_8)};
-            case "عدسی" -> carColors = new String[]{"lentil", URLEncoder.encode("عدسی", StandardCharsets.UTF_8)};
-            case "مارون" -> carColors = new String[]{"maroon", URLEncoder.encode("آلبالویی", StandardCharsets.UTF_8)};
+            case "سفید" -> carColors = new String[]{"white", encode("سفید", UTF_8)};
+            case "مشکی" -> carColors = new String[]{"black", encode("مشکی", UTF_8)};
+            case "خاکستری" -> carColors = new String[]{"gray", encode("خاکستری", UTF_8)};
+            case "نقره ای" -> carColors = new String[]{"silver", encode("نقره‌ای", UTF_8)};
+            case "سفید صدفی" -> carColors = new String[]{"pearlwhite", encode("سفید صدفی", UTF_8)};
+            case "نوک مدادی" -> carColors = new String[]{"blacklead", encode("نوک‌مدادی", UTF_8)};
+            case "آبی" -> carColors = new String[]{"blue", encode("آبی", UTF_8)};
+            case "قهوه ای" -> carColors = new String[]{"brown", encode("قهوه‌ای", UTF_8)};
+            case "قرمز" -> carColors = new String[]{"red", encode("قرمز", UTF_8)};
+            case "سرمه ای" -> carColors = new String[]{"darkblue", encode("سرمه‌ای", UTF_8)};
+            case "بژ" -> carColors = new String[]{"beige", encode("بژ", UTF_8)};
+            case "تیتانیوم" -> carColors = new String[]{"titanium", encode("تیتانیوم", UTF_8)};
+            case "سربی" -> carColors = new String[]{"slategray", encode("سربی", UTF_8)};
+            case "سبز" -> carColors = new String[]{"green", encode("سبز", UTF_8)};
+            case "کربن بلک" -> carColors = new String[]{"carbonblack", encode("کربن‌بلک", UTF_8)};
+            case "آلبالویی" -> carColors = new String[]{"maroon" , encode("آلبالویی", UTF_8)};
+            case "نقرآبی" -> carColors = new String[]{"steelblue", encode("نقرآبی", UTF_8)};
+            case "دلفینی" -> carColors = new String[]{"dolohin", encode("دلفینی", UTF_8)};
+            case "زرد" -> carColors = new String[]{"yellow", encode("زرد", UTF_8)};
+            case "مسی" -> carColors = new String[]{"copper", encode("مسی", UTF_8)};
+            case "یشمی" -> carColors = new String[]{"jadegreen", encode("یشمی", UTF_8)};
+            case "بادمجانی" -> carColors = new String[]{"eggplant", encode("بادمجانی", UTF_8)};
+            case "نارنجی" -> carColors = new String[]{"orange", encode("نارنجی", UTF_8)};
+            case "ذغالی" -> carColors = new String[]{"charcoal", encode("ذغالی", UTF_8)};
+            case "طوسی" -> carColors = new String[]{"darkgray", encode("طوسی", UTF_8)};
+            case "زیتونی" -> carColors = new String[]{"olivegreen", encode("زیتونی", UTF_8)};
+            case "کرم" -> carColors = new String[]{"bisque", encode("کرم", UTF_8)};
+            case "گیلاسی" -> carColors = new String[]{"cherry", encode("گیلاسی", UTF_8)};
+            case "طلایی" -> carColors = new String[]{"golden", encode("طلایی", UTF_8)};
+            case "زرشکی" -> carColors = new String[]{"crimson", encode("زرشکی", UTF_8)};
+            case "اطلسی" -> carColors = new String[]{"satin", encode("اطلسی", UTF_8)};
+            case "برنز" -> carColors = new String[]{"bronze", encode("برنز", UTF_8)};
+            case "عنابی" -> carColors = new String[]{"darkred", encode("عنابی", UTF_8)};
+            case "خاکی" -> carColors = new String[]{"khaki", encode("خاکی", UTF_8)};
+            case "موکا" -> carColors = new String[]{"mocha", encode("موکا", UTF_8)};
+            case "بنفش" -> carColors = new String[]{"purple", encode("بنفش", UTF_8)};
+            case "پوست پیازی" -> carColors = new String[]{"onion", encode("پوست‌پیازی", UTF_8)};
+            case "یاسی" -> carColors = new String[]{"lilac", encode("بنفش", UTF_8)};
+            case "اخرائی" -> carColors = new String[]{"ochre", encode("نارنجی", UTF_8)};
+            case "صورتی" -> carColors = new String[]{"pink", encode("بنفش", UTF_8)};
+            case "عدسی" -> carColors = new String[]{"lentil", encode("عدسی", UTF_8)};
+            case "مارون" -> carColors = new String[]{"maroon", encode("آلبالویی", UTF_8)};
         }
 
         // Statuses
