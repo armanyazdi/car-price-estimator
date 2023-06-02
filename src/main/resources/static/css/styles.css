@@ -71,10 +71,10 @@ td, th {
 
 .app-container {
     margin: 0;
+    background-color: #fff;
     padding: 0 6% 0 6%;
     direction: rtl;
     text-align: right;
-    background: #fff;
 }
 
 .app-image {
@@ -105,13 +105,13 @@ input[type=text]:focus, input[type=number]:focus, select:focus {
     border-bottom: 3px solid #7e4a95;
 }
 
-select:invalid {
-    color: gray;
+input[type=text]::placeholder, input[type=number]::placeholder, select:invalid {
+    color: #717790;
 }
 
 .estimate-btn {
     width: 50%;
-    background: #ff1d4f;
+    background-color: #ff1d4f;
     color: #fff;
     padding: 20px 0;
     margin: 10px 0;
