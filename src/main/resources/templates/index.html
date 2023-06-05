@@ -35,7 +35,7 @@
           <p id="productionToWords"></p>
 
           <label for="mileage"></label>
-          <input required type="number" id="mileage" name="mileage" th:field="*{mileage}" placeholder="کارکرد (کیلومتر)" min="0" max="1000000" step="1000" oninvalid="this.setCustomValidity('کارکرد باید بین ۰ تا ۱۰۰۰۰۰۰ کیلومتر باشد')" oninput="this.setCustomValidity(''); mileageToWords()">
+          <input required type="number" id="mileage" name="mileage" th:field="*{mileage}" placeholder="کارکرد (کیلومتر)" min="0" max="1000000" step="10000" oninvalid="this.setCustomValidity('کارکرد باید بین ۰ تا ۱۰۰۰۰۰۰ کیلومتر باشد')" oninput="this.setCustomValidity(''); mileageToWords()">
           <p id="mileageToWords"></p>
 
           <label for="color"></label>
