@@ -110,7 +110,7 @@ input[type=text]::placeholder, input[type=number]::placeholder, select:invalid {
 }
 
 .estimate-btn {
-    width: 50%;
+    width: 100%;
     background-color: #ff1d4f;
     color: #fff;
     padding: 20px 0;
@@ -120,8 +120,7 @@ input[type=text]::placeholder, input[type=number]::placeholder, select:invalid {
     font-weight: 300;
     cursor: pointer;
     display: inline-block;
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
+    transition: all 0.5s ease;
 }
 
 .estimate-btn:hover {
