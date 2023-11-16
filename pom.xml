@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.armanyazdi</groupId>
     <artifactId>car-price-estimator</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.0-SNAPSHOT</version>
     <name>CarPriceEstimator</name>
     <description>CarPriceEstimator</description>
     <properties>
@@ -45,7 +45,7 @@
         <dependency>
             <groupId>org.jsoup</groupId>
             <artifactId>jsoup</artifactId>
-            <version>1.16.1</version>
+            <version>1.16.2</version>
         </dependency>
     </dependencies>
 
