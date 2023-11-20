@@ -69,13 +69,13 @@ public class PriceEstimator {
             case "پژو 206 صندوقدار V9" -> new String[]{"peugeot-206sd-v9", "peugeot/206-sd/v9"};
             case "پژو 207 اتوماتیک TU5" -> new String[]{"peugeot-207-at", "peugeot/207i/automatic"};
             case "پژو 207 اتوماتیک TU5P" -> new String[]{"peugeot-207-attu5p", "peugeot/207i/automatic"};
-            case "پژو 207 پانوراما اتوماتیک TU5" ->
-                    new String[]{"peugeot-207-automaticpanorama", "peugeot/207i/automatic-p"};
-            case "پژو 207 پانوراما اتوماتیک TU5P" ->
-                    new String[]{"peugeot-207-automaticpanoramatu5p", "peugeot/207i/automatic-p"};
+            case "پژو 207 پانوراما اتوماتیک TU5" -> new String[]{"peugeot-207-automaticpanorama", "peugeot/207i/automatic-p"};
+            case "پژو 207 پانوراما اتوماتیک TU5P" -> new String[]{"peugeot-207-automaticpanoramatu5p", "peugeot/207i/automatic-p"};
             case "پژو 207 پانوراما دنده ای" -> new String[]{"peugeot-207-manualpanorama", "peugeot/207i/manual-p"};
+            case "پژو 207 تیپ 5" -> new String[]{"peugeot-207-type5", "peugeot/207i/manual"};
             case "پژو 207 دنده ای" -> new String[]{"peugeot-207-mt", "peugeot/207i/manual"};
             case "پژو 207 MC اتوماتیک" -> new String[]{"peugeot-207-automaticmc", "peugeot/207i/automatic-mc"};
+            case "پژو 207 TU3" -> new String[]{"peugeot-207-tu3mt", "peugeot/207i/manual"};
             case "پژو 207 صندوقدار اتوماتیک" -> new String[]{"peugeot-207sd-at", "peugeot/207i-sd/automatic"};
             case "پژو 207 صندوقدار دنده ای" -> new String[]{"peugeot-207sd-mt", "peugeot/207i-sd/manual"};
             case "پژو 405 GL" -> new String[]{"peugeot-405-gl", "peugeot/405/gl-petrol"};
@@ -133,18 +133,16 @@ public class PriceEstimator {
             case "تارا دنده ای" -> new String[]{"tara-manual", "tara/manual"};
             case "رنو پارس تندر" -> new String[]{"renault-parstondar", "renault/pars-tondar"};
             case "رنو تندر 90 اتوماتیک" -> new String[]{"renault-tondar90-at", "renault/tondar-90/automatic"};
-            case "رنو تندر 90 پلاس اتوماتیک" ->
-                    new String[]{"renault-tondar90-plusat", "renault/tondar-90-plus/automatic"};
+            case "رنو تندر 90 پلاس اتوماتیک" -> new String[]{"renault-tondar90-plusat", "renault/tondar-90-plus/automatic"};
             case "رنو تندر 90 پلاس دنده ای" -> new String[]{"renault-tondar90-plusmt", "renault/tondar-90-plus/manual"};
             case "رنو تندر 90 E0" -> new String[]{"renault-tondar90-e0", "renault/tondar-90/e0-petrol"};
             case "رنو تندر 90 E1" -> new String[]{"renault-tondar90-e1", "renault/tondar-90/e1-petrol"};
             case "رنو تندر 90 E2" -> new String[]{"renault-tondar90-e2", "renault/tondar-90/e2-petrol"};
             case "رنو ساندرو اتوماتیک" -> new String[]{"renault-sandero-at", "renault/sandero/automatic"};
             case "رنو ساندرو دنده ای" -> new String[]{"renault-sandero-mt", "renault/sandero/manual"};
-            case "رنو ساندرو استپ وی اتوماتیک" ->
-                    new String[]{"renault-sanderostepway-at", "renault/sandero-stepway/automatic"};
-            case "رنو ساندرو استپ وی دنده ای" ->
-                    new String[]{"renault-sanderostepway-mt", "renault/sandero-stepway/manual"};
+            case "رنو ساندرو استپ وی اتوماتیک" -> new String[]{"renault-sanderostepway-at", "renault/sandero-stepway/automatic"};
+            case "رنو ساندرو استپ وی دنده ای" -> new String[]{"renault-sanderostepway-mt", "renault/sandero-stepway/manual"};
+            case "ریسپکت پرایم" -> new String[]{"respect", "respect/prime"};
             case "ساینا اتوماتیک" -> new String[]{"saina-at", "saina/automatic"};
             case "ساینا پلاس دنده ای" -> new String[]{"saina-manualplus", "saina/manual/plus"};
             case "ساینا EX دنده ای" -> new String[]{"saina-exmt", "saina/manual/ex"};
@@ -162,6 +160,10 @@ public class PriceEstimator {
             case "سیتروئن زانتیا 1.8" -> new String[]{"citroen-xantia-1.8superlux", "citroen/xantia/1800cc"};
             case "سیتروئن زانتیا 2.0 SX" -> new String[]{"citroen-xantia-2.0sx", "citroen/xantia/2000cc"};
             case "شاهین G" -> new String[]{"shahin-g", "shahin/g"};
+            case "فردا 511" -> new String[]{"farda-511", "farda/511"};
+            case "فردا SX5" -> new String[]{"farda-sx5", "farda/sx5"};
+            case "فردا SX6" -> new String[]{"farda-sx6", "farda/sx6"};
+            case "فردا T5" -> new String[]{"farda-t5", "farda/t5"};
             case "فیدلیتی پرایم 5 نفره" -> new String[]{"fidelity-prime-5seater", "fidelity/prime/5seater"};
             case "فیدلیتی پرایم 7 نفره" -> new String[]{"fidelity-prime-7seater", "fidelity/prime/7seater"};
             case "کوییک اتوماتیک" -> new String[]{"quick-atfull", "quick/automatic/full"};
