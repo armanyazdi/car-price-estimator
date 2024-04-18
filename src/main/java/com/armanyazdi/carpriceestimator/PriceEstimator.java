@@ -21,9 +21,7 @@ public class PriceEstimator {
         ArrayList<String> bamaPricesList = new ArrayList<>();
         ArrayList<String> divarPricesList = new ArrayList<>();
         ArrayList<String> allPricesList = new ArrayList<>();
-        long sumBama = 0;
-        long sumDivar = 0;
-        long sumAll = 0;
+        long sumBama = 0, sumDivar = 0, sumAll = 0;
 
         // Cars
         String[] carBrands = switch (brand) {
@@ -68,14 +66,14 @@ public class PriceEstimator {
             case "پژو 206 صندوقدار V8" -> new String[]{"peugeot-206sd-v8", "peugeot/206-sd/v8"};
             case "پژو 206 صندوقدار V9" -> new String[]{"peugeot-206sd-v9", "peugeot/206-sd/v9"};
             case "پژو 207 اتوماتیک TU5" -> new String[]{"peugeot-207-at", "peugeot/207i/automatic"};
-            case "پژو 207 اتوماتیک TU5P" -> new String[]{"peugeot-207-attu5p", "peugeot/207i/automatic"};
+            case "پژو 207 اتوماتیک TU5P" -> new String[]{"peugeot-207-attu5p", "peugeot/207i/automatic-tu5p"};
             case "پژو 207 پانوراما اتوماتیک TU5" -> new String[]{"peugeot-207-automaticpanorama", "peugeot/207i/automatic-p"};
-            case "پژو 207 پانوراما اتوماتیک TU5P" -> new String[]{"peugeot-207-automaticpanoramatu5p", "peugeot/207i/automatic-p"};
+            case "پژو 207 پانوراما اتوماتیک TU5P" -> new String[]{"peugeot-207-automaticpanoramatu5p", "peugeot/207i/automatic-p-tu5p"};
             case "پژو 207 پانوراما دنده ای" -> new String[]{"peugeot-207-manualpanorama", "peugeot/207i/manual-p"};
             case "پژو 207 تیپ 5" -> new String[]{"peugeot-207-type5", "peugeot/207i/manual"};
             case "پژو 207 دنده ای" -> new String[]{"peugeot-207-mt", "peugeot/207i/manual"};
             case "پژو 207 MC اتوماتیک" -> new String[]{"peugeot-207-automaticmc", "peugeot/207i/automatic-mc"};
-            case "پژو 207 TU3" -> new String[]{"peugeot-207-tu3mt", "peugeot/207i/manual"};
+            case "پژو 207 TU3" -> new String[]{"peugeot-207-tu3mt", "peugeot/207i/manual-tu3"};
             case "پژو 207 صندوقدار اتوماتیک" -> new String[]{"peugeot-207sd-at", "peugeot/207i-sd/automatic"};
             case "پژو 207 صندوقدار دنده ای" -> new String[]{"peugeot-207sd-mt", "peugeot/207i-sd/manual"};
             case "پژو 405 GL" -> new String[]{"peugeot-405-gl", "peugeot/405/gl-petrol"};
@@ -123,8 +121,8 @@ public class PriceEstimator {
             case "دنا پلاس 6 دنده توربو" -> new String[]{"dena-plus-turbo6mt", "dena/plus/manual-6-turbo"};
             case "دنا پلاس اتوماتیک توربو" -> new String[]{"dena-plus-turboautomatic", "dena/plus/automatic"};
             case "دنا پلاس دنده ای ساده" -> new String[]{"dena-plus-basicmanual", "dena/plus/manual-2"};
-            case "دیگنیتی پرایم" -> new String[]{"dignity-prime", "dignity"};
-            case "دیگنیتی پرستیژ" -> new String[]{"dignity-prestige", "dignity"};
+            case "دیگنیتی پرایم" -> new String[]{"dignity-prime", "dignity/prime"};
+            case "دیگنیتی پرستیژ" -> new String[]{"dignity-prestige", "dignity/prestige"};
             case "رانا پلاس" -> new String[]{"runna-plus", "runna/plus"};
             case "رانا پلاس پانوراما" -> new String[]{"runna-pluspanorama", "runna/plus-p"};
             case "رانا EL" -> new String[]{"runna-el", "runna/el"};
